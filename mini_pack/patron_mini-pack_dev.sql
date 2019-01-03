@@ -103,9 +103,9 @@ SELECT
         WHEN a.most_common_buyer_type_regroup = 'Holiday' AND b.high_spender = 1 THEN 'Holiday High Spender'
         WHEN a.most_common_buyer_type_regroup = 'Holiday' AND b.high_spender = 0 THEN 'Holiday Low Spender'
         WHEN a.most_common_buyer_type_regroup = 'Jewel' AND b.high_spender = 1 THEN 'Jewel High Spender'
-        WHEN a.most_common_buyer_type_regroup = 'Jewel' AND b.high_spender = 0 THEN 'Jewel High Spender'
+        WHEN a.most_common_buyer_type_regroup = 'Jewel' AND b.high_spender = 0 THEN 'Jewel Low Spender'
         WHEN a.most_common_buyer_type_regroup = 'Standard' AND b.high_spender = 1 THEN 'Standard High Spender'
-        WHEN a.most_common_buyer_type_regroup = 'Standard' AND b.high_spender = 0 THEN 'Standard High Spender'
+        WHEN a.most_common_buyer_type_regroup = 'Standard' AND b.high_spender = 0 THEN 'Standard Low Spender'
         ELSE 'N/A'
     END AS patron_category
 FROM patron_most_common_buyer_type a
