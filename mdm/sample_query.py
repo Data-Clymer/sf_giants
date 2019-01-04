@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 import snowflake.connector
+from getpass import getpass
 
 USER = input("enter snowflake username: ")
-PASS = input("enter snowflake password: ")
-ACCOUNT = input("enter snowflake account: ")
+PASS = getpass("enter snowflake password: ")
+ACCOUNT = getpass("enter snowflake account: ")
 
 # Connect to Snoflake
 con = snowflake.connector.connect(
